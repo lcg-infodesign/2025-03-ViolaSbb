@@ -2,7 +2,7 @@ canvas {
   display: block;
 }
 #sketch{
-  margin: 0;
+  margin: 0 auto 3em;
   padding: 0;
 }
 body {
@@ -118,11 +118,6 @@ footer {
   justify-content: center;
   align-content: center;
   padding: 3em;
-}
-
-.linea {
-  opacity: 0.5;
-  margin: 2em 0.3em;
 }
 
 #sketch {

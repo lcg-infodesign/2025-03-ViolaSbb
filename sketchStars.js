@@ -6,7 +6,7 @@ function preload() {
 }
 
 function setup() {
-         let canvas = createCanvas(windowWidth*0.95, windowHeight);
+         let canvas = createCanvas(windowWidth*0.9, windowHeight);
          canvas.parent("sketch"); //collegamento posizione in html
 
          //ricavo i dati
