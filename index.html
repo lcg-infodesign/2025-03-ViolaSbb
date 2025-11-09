@@ -2,17 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Sketch</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
   </head>
 
   <body>
-    <script src="sketch.js"></script>
+    <header>
+      <h1>Mappare le stelle</h1>
+      <p>Assignment 3 - una visione d'insieme</p>
+    </header>
+
+<div class="legenda">
+  <h2>Legenda delle stelle</h2>
+
+  <div class="contenutilegenda">
+    <p><b>Colore</b></p>
+    <p><b>Raggio</b></p>
+    <p><b>Magnitudine assoluta</b></p>
+  </div>
+
+  <div class="contenutilegenda">
+    <div class="dots">
+      <div class="nomicolori"><span class="colordot" id="red"></span><p>Rosso</p></div>
+      <div class="nomicolori"><span class="colordot" id="orange"></span><p>Arancione</p></div>
+      <div class="nomicolori"><span class="colordot" id="yellow"></span><p>Giallo</p></div>
+      <div class="nomicolori"><span class="colordot" id="yellow-white"></span><p>Giallo-bianco</p></div>
+      <div class="nomicolori"><span class="colordot" id="white"></span><p>Bianco</p></div>
+      <div class="nomicolori"><span class="colordot" id="blue-white"></span><p>Blu-bianco</p></div>
+      <div class="nomicolori"><span class="colordot" id="blue"></span><p>Blu</p></div>
+    </div>
+
+    <div class="dots">
+      <div class="nomicolori">
+        <span class="colordot" id="raggio"></span>
+      </div>
+    </div>
+
+    <div class="dots">
+      <div class="nomicolori">
+        <span class="colordot" id="magnitudine"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div id="infobox">
+      <p>
+        <b><span id="tipo"></span>, spettro <span id="spettro"></span></b>
+        <br /><i>Temperatura</i>: <span id="temp"></span> K<br />
+        <i>Luminosità</i>: <span id="lum"></span> L☉<br />
+        <i>Raggio</i>: <span id="rag"></span> R☉<br />
+        <i>Magnitudine assoluta</i>: <span id="magA"></span><br />
+      </p>
+    </div>
+    <div id="sketch"></div>
+    <footer>
+      <hr class="linea" />
+      <p>Viola Sabbatini - Information Design - 2025</p>
+    </footer>
+
+    <script src="sketchStars.js"></script>
   </body>
 </html>

@@ -1,8 +1,114 @@
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
 canvas {
   display: block;
+}
+body {
+  margin: 2em;
+  background-color: rgb(12, 12, 23);
+  color: azure;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2{
+  font-size: large;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.legenda {
+  background-color: rgba(5, 4, 80, 0.6);
+  padding: 1.5em 2em;
+  border-radius: 0.8em;
+  max-width: 80vw;
+  margin: 2em auto;
+}
+
+.contenutilegenda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.voce-legenda {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5em;
+  min-width: 200px;
+}
+
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.nomicolori {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  gap: 0.5em;
+}
+
+.colordot {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+#red { background-color: rgb(255, 80, 80); }
+#orange { background-color: rgb(255, 160, 80); }
+#yellow { background-color: rgb(255, 255, 100); }
+#yellow-white { background-color: rgb(252, 243, 173); }
+#white { background-color: rgb(255, 255, 255); }
+#blue-white { background-color: rgb(180, 200, 255); }
+#blue { background-color: rgb(100, 150, 255); }
+
+#raggio{
+  width: 2.8em;
+  height: 2.8em;
+  border-radius: 50%;
+  border: 3px rgb(5, 4, 130) solid;
+}
+#magnitudine{
+  width: 2.8em;
+  height: 2.8em;
+  border-radius: 50%;
+  background-color: aliceblue;
+  opacity: 0.5;
+}
+
+#infobox {
+  position: absolute;
+  background-color: rgb(5, 4, 80, 0.6);
+  font-size: small;
+  line-height: 1.8em;
+  padding: 1em 2em;
+  min-width: fit-content;
+  max-width: 15vw;
+  border-radius: 0.8em;
+  opacity: 0; /*così è nascosto di base*/
+  z-index: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 3em;
+}
+
+.linea {
+  opacity: 0.5;
+  margin: 2em 0.3em;
+}
+
+#sketch {
+  display: block;
+  position: relative;
+  align-content: center;
 }
