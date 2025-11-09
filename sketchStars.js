@@ -6,7 +6,7 @@ function preload() {
 }
 
 function setup() {
-         let canvas = createCanvas(windowWidth, windowHeight);
+         let canvas = createCanvas(windowWidth*0.95, windowHeight);
          canvas.parent("sketch"); //collegamento posizione in html
 
          //ricavo i dati
@@ -59,9 +59,10 @@ function draw() {
          background(12, 12, 23);
          let hovered = false; //serve per la card dopo
          let marginLeft = 50;
+         let marginRight = 50;
+         let marginTop = 40;
          let marginBottom = 60;
-         let marginRight = 30;
-         let marginTop = 30;
+
          //disegno gli assi x e y
          push();
          stroke(255);
@@ -101,37 +102,34 @@ function draw() {
                            select("#magA").html(data.getNum(row, "A_M"));
 
                            //se troppo vicino a margine destro
-                           let offsetX = 40;
-                           let offsetY = 80;
+                           let offsetX = 50;
+                           let offsetY = 420;
 
-                           if (x + 250 > width) offsetX = -200;
-                           if (y + 250 > height) offsetY = 0;
-                           if (y - 250 < 0) offsetY = 200;
+                           if (x + 250 > width) offsetX = -220; //se troppo a dx vai a sx
+                           if (y + 190 > height) offsetY = 350; //se troppo basso vai su
+
                            //box si mostra
-
                            infobox.position(x + offsetX, y + offsetY);
                            infobox.style("opacity", 1);
                   }
 
-
-
                   push();
-                  noStroke()
+                  noStroke();
                   if (isHovered) {
-                           fill(starColor[0], starColor[1], starColor[2], 180)
+                           fill(starColor[0], starColor[1], starColor[2], 210);
                   } else {
-                           fill(starColor[0], starColor[1], starColor[2], 120)
-                  }; // 3 parametri perché R, G, B (stabilito nella funzione prima)
+                           fill(starColor[0], starColor[1], starColor[2], 120);
+                  }
                   ellipse(x, y, absMagn);
                   pop();
 
                   push();
                   strokeWeight(1.5);
                   if (isHovered) {
-                           stroke(starColor[0], starColor[1], starColor[2])
+                           stroke(starColor[0], starColor[1], starColor[2]);
                   } else {
-                           stroke(5, 4, 130)
-                  };
+                           stroke(5, 4, 130);
+                  }
                   noFill();
                   ellipse(x, y, radius);
                   pop();
@@ -141,7 +139,8 @@ function draw() {
          fill(255);
          textSize(14);
          textAlign(CENTER);
-         text("Luminosità (L☉) →", windowWidth / 2, height - 20);
+         text("Luminosità (L☉)", windowWidth / 2, height - 20);
+         text("relativa al Sole →", windowWidth / 2, height);
          push();
          translate(20, height / 2);
          rotate(-HALF_PI);
